@@ -1,53 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tailwind Background Image Example</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="./src/tailwind.config.js">
-</head>
-<style>
-    @font-face {
-        font-family: 'Oxygen';
-        src: url('fonts/Oxygen-Regular.ttf') format('truetype');
-        src: url('fonts/Oxygen-Bold.ttf') format('truetype');
-        src: url('fonts/Oxygen-Light.ttf') format('truetype');
-    }
-</style>
-<body>
-  <div class="relative h-screen bg-cover bg-center bg-no-repeat animate-zoomOut delay-200" style="background-image:url(./img/bg.jpg);">
-    <!-- Overlay -->
-    <div class="absolute inset-0 bg-black bg-opacity-60"></div>
 
-    <!-- Centered Content -->
-    <div class="relative z-10 flex items-center justify-center h-full px-4">
-      <div class="text-center text-white max-w-2xl">
-        <h3 class="text-4xl md:text-6xl font-bold mb-4"><i class="bi bi-code-slash rounded-[50%] px-7 py-4" style="border: 1px white solid;"></i></h3>
-        <div class="mt-6 translate-x-[335px]" style="border-left: 1px solid white; height: 80px;"></div>
-        <div class="flex align-self-center translate-x-[-100px]" style="border-top: 1px solid white; width: 900px;"></div>
-            <div class="flex my-[80px] w-[900px]">
-                <img src="./img/ping-avatar.jpg" alt="" srcset="" class="h-40 w-40 rounded-full translate-x-[-80px]">
-                <div>
-                    <h1 class="text-6xl font-[Monospace] tracking-tight">Pia Galang Mabutin</h1>
-                    <p class="text-start text-4xl font-[Monospace] tracking-[10px] my-4">Front-End Developer</p>
-                </div>
+    <link href="/src/output.css" rel="stylesheet">
+    <title>PI NG</title>
+</head>
+<body>
+    <section>
+        <div class="relative flex items-center">
+            <img src="./img/bg.jpg" alt="" srcset="" class="absolute w-full h-screen bg-neutral-200 bg-blend-multiply blur-[3px] bg-no-repeat bg-cover">
+            <div class="absolute inset-0 flex items-center justify-center place-item text-white">
+                <i class="bi bi-code-slash"></i>
             </div>
-        <div class="flex align-self-center translate-x-[-100px]" style="border-top: 1px solid white; width: 900px;"></div>
-        <div class="translate-x-[335px]" style="border-left: 1px solid white; height: 80px;"></div>
-            <div class="flex justify-between text-2xl font-[Serif] border-white">
-                <h2 class="border w-48 py-3">HTML</h2>
-                <h2 class="border w-48 py-3">CSS</h2>
-                <h2 class="border w-48 py-3">JavaScript</h2>
-                <h2 class="border w-48 py-3">Tailwind</h2>
-            </div>
-      </div>
-    </div>
-  </div>
+        </div> 
+    </section>
 </body>
 </html>
